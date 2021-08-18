@@ -9,16 +9,17 @@ case $OSTYPE in
     ;;
 esac
 
+SOURCENAME="bash-config.sh"
 FILENAME=".bash-config"
 
-cp $FILENAME $HOME
+cp $SOURCENAME $HOME/$FILENAME
 
 if grep -q "# installed bash-config" "$HOME/$BASHRC"; then
   echo "already installed bash-config"
   grep "# installed bash-config" "$HOME/$BASHRC"
 else
   echo "# installed bash-config" >> $HOME/$BASHRC
-  echo "source ~/$FILENAME" >> $HOME/$BASHRC
+  echo "source $HOME/$FILENAME" >> $HOME/$BASHRC
   echo "bash-config on."
 fi
 

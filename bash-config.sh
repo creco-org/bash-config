@@ -2,12 +2,15 @@ echo "Welcome To Bash!"
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-parse_git_branch() {
+function parse_git_branch() {
 #     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1 /'
 }
+function current_dir() {
+    echo ${PWD/*\//}
+}
 # export PS1="\[\e[96m\]\w \[\e[30;48;5;82m\]\$(parse_git_branch)\[\e[00m\]\n\[\e[32m\]➜ \[\e[m\]"
-export PS1="\[\e[01;96m\]${PWD/*\//}\[\e[00m\] \[\e[30;48;5;82m\]\$(parse_git_branch)\[\e[00m\]\n\[\e[32m\]➜ \[\e[m\]"
+export PS1='\[\e[01;96m\]$(current_dir)\[\e[00m\] \[\e[30;48;5;82m\]$(parse_git_branch)\[\e[00m\]\n\[\e[32m\]➜ \[\e[m\]'
 
 # Aliases
 alias gc='git commit -v'
