@@ -1,4 +1,4 @@
-echo "Welcome To Bash!"
+echo -e "\033[01;32mWelcome to bash!\033[m"
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
@@ -53,3 +53,11 @@ alias md='mkdir -p'
 alias rd=rmdir
 alias run-help=man
 alias which-command=whence
+
+
+
+# history size unlimit
+unset HISTSIZE 
+unset HISTFILESIZE
+shopt -s histappend
+

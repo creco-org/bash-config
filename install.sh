@@ -15,11 +15,11 @@ FILENAME=".bash-config"
 cp $SOURCENAME $HOME/$FILENAME
 
 if grep -q "# installed bash-config" "$HOME/$BASHRC"; then
-  echo "already installed bash-config"
-  grep "# installed bash-config" "$HOME/$BASHRC"
+  echo "already bash-config installed"
 else
   echo "# installed bash-config" >> $HOME/$BASHRC
   echo "source $HOME/$FILENAME" >> $HOME/$BASHRC
-  echo "bash-config on."
+  echo "bash-config installed"
 fi
 
+source $HOME/$FILENAME
