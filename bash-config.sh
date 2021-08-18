@@ -61,3 +61,11 @@ unset HISTSIZE
 unset HISTFILESIZE
 shopt -s histappend
 
+# auto complete
+
+if [[ $- == *i* ]]
+then
+    bind '"\e[A": history-search-backward'
+    bind '"\e[B": history-search-forward'
+fi
+
