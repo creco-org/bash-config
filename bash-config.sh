@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 echo -e "\033[01;32mWelcome to bash!\033[m"
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
@@ -9,6 +10,8 @@ function parse_git_branch() {
 function current_dir() {
     echo ${PWD/*\//}
 }
+export -f parse_git_branch
+export -f current_dir
 # export PS1="\[\e[96m\]\w \[\e[30;48;5;82m\]\$(parse_git_branch)\[\e[00m\]\n\[\e[32m\]➜ \[\e[m\]"
 export PS1='\[\e[01;96m\]$(current_dir)\[\e[00m\] \[\e[30;48;5;82m\]$(parse_git_branch)\[\e[00m\]\n\[\e[32m\]➜ \[\e[m\]'
 
@@ -50,10 +53,10 @@ alias ll='ls -lh'
 alias ls='ls -G'
 alias lsa='ls -lah'
 alias md='mkdir -p'
+alias bs='/usr/local/bin/bash'
 alias rd=rmdir
 alias run-help=man
 alias which-command=whence
-
 
 
 # history size unlimit
