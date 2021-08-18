@@ -59,10 +59,19 @@ alias run-help=man
 alias which-command=whence
 
 
+# https://stackoverflow.com/questions/9457233/unlimited-bash-history#answer-19533853
 # history size unlimit
-unset HISTSIZE 
-unset HISTFILESIZE
-shopt -s histappend
+export HISTFILESIZE=
+export HISTSIZE=
+export HISTTIMEFORMAT="[%F %T] "
+
+export HISTFILE=~/.bash_eternal_history
+# Force prompt to write history after every command.
+# http://superuser.com/questions/20900/bash-history-loss
+PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+# unset HISTSIZE 
+# unset HISTFILESIZE
+# shopt -s histappend
 
 # auto complete
 
