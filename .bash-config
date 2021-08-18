@@ -1,13 +1,17 @@
+echo "Welcome To Bash!"
+
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 parse_git_branch() {
 #     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1 /'
 }
-export PS1="\[\e[96m\]\w \[\e[30;48;5;82m\]\$(parse_git_branch)\[\e[00m\] "
+export PS1="\[\e[96m\]\w \[\e[30;48;5;82m\]\$(parse_git_branch)\[\e[00m\]\n\[\e[32m\]➜ \[\e[m\]"
 
 # Aliases
 alias gc='git commit -v'
 alias ga='git add'
-
+alias gs='git status'
 function current_branch() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
   echo ${ref#refs/heads/}

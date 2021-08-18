@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 
-BASHRC=".bashrc"
+case $OSTYPE in
+  darwin*)
+    BASHRC=".bash_profile"
+    ;;
+  *)
+    BASHRC=".bashrc"
+    ;;
+esac
+
 FILENAME=".bash-config"
 
 #if [ -f "$HOME/$FILENAME" ] ; then
