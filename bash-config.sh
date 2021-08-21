@@ -81,3 +81,6 @@ then
     bind '"\e[B": history-search-forward'
 fi
 
+# color setting
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
