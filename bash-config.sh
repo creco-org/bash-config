@@ -57,7 +57,7 @@ alias bs='/usr/local/bin/bash'
 alias rd=rmdir
 alias run-help=man
 alias which-command=whence
-
+alias cl='curl -L'
 
 # https://stackoverflow.com/questions/9457233/unlimited-bash-history#answer-19533853
 # history size unlimit
