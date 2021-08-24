@@ -57,6 +57,7 @@ alias bs='/usr/local/bin/bash'
 alias cl='curl -L'
 alias vi='vim'
 alias v='vim'
+alias re='exec bash'
 alias rd=rmdir
 alias run-help=man
 alias which-command=whence
