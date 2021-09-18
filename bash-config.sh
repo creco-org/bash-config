@@ -4,11 +4,11 @@ echo -e "\033[01;32mWelcome to bash!\033[m"
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 function parse_git_branch() {
-#     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1 /'
+  #     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+  git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1 /'
 }
 function current_dir() {
-    echo ${PWD/*\//}
+  echo ${PWD/*\//}
 }
 export -f parse_git_branch
 export -f current_dir
@@ -20,12 +20,12 @@ alias gc='git commit -v'
 alias ga='git add'
 alias gs='git status'
 function current_branch() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  ref=$(git symbolic-ref HEAD 2>/dev/null) || return
   echo ${ref#refs/heads/}
 }
 
 function current_repository() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  ref=$(git symbolic-ref HEAD 2>/dev/null) || return
   echo $(git remote -v | cut -d':' -f 2)
 }
 
@@ -58,6 +58,7 @@ alias cl='curl -L'
 alias vi='vim'
 alias v='vim'
 alias re='exec bash'
+alias wrun='wrun(){ wget -q -O - $1 | bash;}; wrun'
 alias rd=rmdir
 alias run-help=man
 alias which-command=whence
@@ -72,18 +73,16 @@ export HISTFILE=~/.bash_eternal_history
 # Force prompt to write history after every command.
 # http://superuser.com/questions/20900/bash-history-loss
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
-# unset HISTSIZE 
+# unset HISTSIZE
 # unset HISTFILESIZE
 # shopt -s histappend
 
 # auto complete
 
-if [[ $- == *i* ]]
-then
-    bind '"\e[A": history-search-backward'
-    bind '"\e[B": history-search-forward'
+if [[ $- == *i* ]]; then
+  bind '"\e[A": history-search-backward'
+  bind '"\e[B": history-search-forward'
 fi
 
 # color setting
 export LSCOLORS=ExFxCxDxBxegedabagacad
-
