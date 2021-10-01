@@ -1,6 +1,6 @@
 # bash-config
 
 ```
-bash install.sh
-chsh -s /bin/bash
+sudo bash install.sh
+sudo chsh -s /bin/bash
 ```
