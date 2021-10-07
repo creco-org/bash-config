@@ -13,7 +13,8 @@ function current_dir() {
 export -f parse_git_branch
 export -f current_dir
 # export PS1="\[\e[96m\]\w \[\e[30;48;5;82m\]\$(parse_git_branch)\[\e[00m\]\n\[\e[32m\]➜ \[\e[m\]"
-export PS1='\[\e[01;96m\]$(current_dir)\[\e[00m\] \[\e[30;48;5;82m\]$(parse_git_branch)\[\e[00m\]\n\[\e[32m\]➜ \[\e[m\]'
+# export PS1='\[\e[01;96m\]$(current_dir)\[\e[00m\] \[\e[30;48;5;82m\]$(parse_git_branch)\[\e[00m\]\n\[\e[32m\]➜ \[\e[m\]'
+export PS1='\[\e[01;96m\]$(current_dir)\[\e[00m\] \[\e[30;48;5;82m\]$(parse_git_branch)\[\e[00m\] \D{%Y-%m-%d %H:%M.%S}\n\[\e[32m\]➜ \[\e[m\]'
 
 # Aliases
 alias gc='git commit -v'
