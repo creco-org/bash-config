@@ -77,3 +77,5 @@ fi
 
 # color setting
 export LSCOLORS=ExFxCxDxBxegedabagacad
+
+eval "$(direnv hook bash)" 2> /dev/null
