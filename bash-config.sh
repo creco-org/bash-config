@@ -50,7 +50,7 @@ alias wrun='wrun(){ wget -q -O - $1 | bash;}; wrun'
 alias rd=rmdir
 alias run-help=man
 alias which-command=whence
-alias docker=nerdctl
+alias docker="lima nerdctl"
 alias gwc='git diff HEAD --shortstat'
 alias grep="rg"
 
