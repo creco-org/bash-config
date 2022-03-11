@@ -51,6 +51,7 @@ alias rd=rmdir
 alias run-help=man
 alias which-command=whence
 # alias docker=nerdctl
+# alias docker="lima nerdctl"
 alias gwc='git diff HEAD --shortstat'
 alias grep="rg"
 alias g="git"
@@ -79,4 +80,4 @@ fi
 # color setting
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
-eval "$(direnv hook bash)" 2> /dev/null
+eval "$(direnv hook bash)" 2>/dev/null
