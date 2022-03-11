@@ -50,9 +50,10 @@ alias wrun='wrun(){ wget -q -O - $1 | bash;}; wrun'
 alias rd=rmdir
 alias run-help=man
 alias which-command=whence
-alias docker=nerdctl
+# alias docker=nerdctl
 alias gwc='git diff HEAD --shortstat'
 alias grep="rg"
+alias g="git"
 
 # https://stackoverflow.com/questions/9457233/unlimited-bash-history#answer-19533853
 # history size unlimit
