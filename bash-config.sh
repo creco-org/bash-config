@@ -80,7 +80,7 @@ fi
 # color setting
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
-eval "$(direnv hook bash)" 2>/dev/null
-
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+eval "$(direnv hook bash)" 2>/dev/null
 
