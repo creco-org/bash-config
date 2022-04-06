@@ -82,7 +82,6 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 
 eval "$(direnv hook bash)" 2>/dev/null
 
-
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/creco/.zprofile
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/creco/.zprofile
+# eval "$(/opt/homebrew/bin/brew shellenv)"
 
