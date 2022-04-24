@@ -55,6 +55,7 @@ alias which-command=whence
 alias gwc='git diff HEAD --shortstat'
 alias grep="rg"
 alias g="git"
+alias t="todo"
 
 # https://stackoverflow.com/questions/9457233/unlimited-bash-history#answer-19533853
 # history size unlimit
