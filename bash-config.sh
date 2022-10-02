@@ -100,4 +100,7 @@ export TODO_GITHUB_TOKEN=
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+export GEM_HOME="$HOME/.rvm/gems/ruby-3.0.0/bin"
+export GEM_PATH="$GEM_HOME:$HOME/.rvm/gems/ruby-3.0.0@global/bin"
+
 export PATH="$PATH:$HOME/.rvm/bin"
