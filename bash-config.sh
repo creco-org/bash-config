@@ -56,6 +56,7 @@ alias gwc='git diff HEAD --shortstat'
 alias grep="rg"
 alias g="git"
 alias t="todo"
+alias gh-create-repo="gh repo create --public --add-readme"
 
 # https://stackoverflow.com/questions/9457233/unlimited-bash-history#answer-19533853
 # history size unlimit
@@ -87,7 +88,16 @@ eval "$(direnv hook bash)" 2>/dev/null
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"                                       # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+nvm use 16.14.0
+
+export TODO_GITHUB_REPO=
+export TODO_GITHUB_TOKEN=
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export PATH="$PATH:$HOME/.rvm/bin"
