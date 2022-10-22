@@ -93,7 +93,7 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-nvm use 16 >/dev/null 2>&1 &
+nvm use 16.14.0 >/dev/null 2>&1 &
 
 export TODO_GITHUB_REPO=
 export TODO_GITHUB_TOKEN=
