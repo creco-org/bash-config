@@ -103,4 +103,9 @@ export TODO_GITHUB_TOKEN=
 export GEM_HOME="$HOME/.rvm/gems/ruby-3.0.0/bin"
 export GEM_PATH="$GEM_HOME:$HOME/.rvm/gems/ruby-3.0.0@global/bin"
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
