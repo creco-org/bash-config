@@ -110,8 +110,3 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
-export CRECO_STORAGE_PAT=
-
-if [ -z "$CRECO_STORAGE_PAT" ]; then
-  echo "CRECO_STORAGE_PAT is empty"
-fi
