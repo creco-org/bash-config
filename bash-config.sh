@@ -57,6 +57,9 @@ alias grep="rg"
 alias g="git"
 alias t="todo"
 alias gh-create-repo="gh repo create --public --add-readme"
+function cs() {
+  curl -XGET -L -s "https://creco-org.github.io/cheatsheet.creco.me/$1"
+}
 
 # https://stackoverflow.com/questions/9457233/unlimited-bash-history#answer-19533853
 # history size unlimit
